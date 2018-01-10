@@ -38,9 +38,9 @@ const sortByProp = (prop) => {
 
 // TODO: pass a parameter 
 // use === instead of '=='
-const sortBy = () => {
+const sortBy = (prop) => {
     // const prop = el("#sortBy").value;
-    const prop = el("#nameSymb").value;
+    // const prop = el("#nameSymb").value;
     // console.log('sortByElement',sortByElement);
     console.log('prop : ' + prop);
 
