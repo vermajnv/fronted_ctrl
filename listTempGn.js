@@ -1,14 +1,8 @@
 let studentToBeModify = {};
 
 const listTemp = () => {
-    return `<select id="sortBy" onchange="sortBy()">
-                <option>Sort By</option>
-                <option value="name">Name</option>
-                <option value="address">Address</option>
-                <option value="college">College</option>
-            </select>
-            <table id="table">
-                <tr><th onclick = "sortBy('name')">Name<i value = "name" id = "nameSymb"></i></th><th>Address<i></i></th><th>College<i></i></th><th>Update Action</th><th>Update Action</th>   </tr>
+    return `<table id="table">
+                <tr><th onclick = "sortBy('name')">Name<i value = "name" id = "nameSymb"></i></th><th onclick = "sortBy('address')">Address<i></i></th><th onclick = "sortBy('college')">College<i></i></th><th>Update Action</th><th>Update Action</th>   </tr>
                 ${students.map((student)=>{
                     return `<tr> <td>${student.name}</td> <td>${student.address}</td> <td>${student.college}</td> <td><button onclick="erase(${student.id})">X</button></td><td> <button onclick="update(${student.id},'Update')">Update</button></td></tr>`;
                 }).join('')
